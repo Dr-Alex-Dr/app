@@ -27,9 +27,7 @@ const [deletePhoto, setdeletePhoto] = React.useState([]);
     const {status} = await Camera.requestPermissionsAsync();
     if (status === 'granted') {
       setStartCamera(true);
-    } else {
-      Alert.alert('Access denied');
-    }
+    } 
   }
 
   const __stopCamera = () => {
