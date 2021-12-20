@@ -77,6 +77,7 @@ function Map() {
                   text: item.text,
                   date: item.date,
                   id: item.id,
+                  photos: item.photos
                   
                 })} />
           );

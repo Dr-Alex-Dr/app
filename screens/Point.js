@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions, ScrollView, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Dimensions, ScrollView, Image, TextInput } from 'react-native';
 import Header from '../componets/header';
 import { useNavigation } from '@react-navigation/native';
 import Slider from '../componets/slider';
@@ -47,7 +47,7 @@ const Point = ({route}) => {
             
             <View style={styles.wrapper}>
               <View style={styles.status}>
-                {/* <Text>{route.params.photos}</Text> */}
+                {/* <TextInput>{route.params.photos}</TextInput> */}
                 <Text style={{marginBottom: 5, fontWeight: '500', fontSize: 15}}>{route.params.clear == 0 ? "Не убрано" : "Убрано"}</Text>
                 <Text style={{fontSize: 14, color: '#828282', display: route.params.clear == 0 ? "none" : "block"}}>12.11.2021</Text>
                 <Image style={{position: 'absolute', left: -10, bottom: -10, transform: [{ scale: 0.7 }]}} source={route.params.clear == 0 ? require('../assets/map/R_status-2.png') : require('../assets/map/G_status-2.png')}/>
